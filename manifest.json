@@ -1,0 +1,11 @@
+{
+  "name": "我的天氣",
+  "short_name": "我的天氣",
+  "description": "台灣天氣資訊與天氣小幫手",
+  "lang": "zh-TW",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4f6f8",
+  "theme_color": "#f4f6f8",
+  "orientation": "portrait"
+}
