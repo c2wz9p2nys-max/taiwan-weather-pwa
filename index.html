@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <meta name="theme-color" content="#f5f7fa">
+
+    <title>我的天氣</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- 頂端 -->
+    <header class="topbar">
+        <div>
+            <div class="small-title">我的天氣</div>
+            <h1>📍 板橋區</h1>
+        </div>
+
+        <button class="location-button">⌖</button>
+    </header>
+
+
+    <!-- 主要天氣 -->
+    <main id="home" class="page active">
+
+        <section class="weather-card">
+
+            <div class="weather-icon">☀️</div>
+
+            <div class="temperature">
+                29°
+            </div>
+
+            <div class="weather-description">
+                晴時多雲
+            </div>
+
+            <div class="temperature-range">
+                最高 33°　最低 27°
+            </div>
+
+        </section>
+
+
+        <!-- 天氣資訊 -->
+        <section class="info-grid">
+
+            <div class="info-card">
+                <span>💧</span>
+                <strong>72%</strong>
+                <small>濕度</small>
+            </div>
+
+            <div class="info-card">
+                <span>🌧️</span>
+                <strong>20%</strong>
+                <small>降雨機率</small>
+            </div>
+
+            <div class="info-card">
+                <span>💨</span>
+                <strong>2.1 m/s</strong>
+                <small>風速</small>
+            </div>
+
+            <div class="info-card">
+                <span>🌡️</span>
+                <strong>33°</strong>
+                <small>體感溫度</small>
+            </div>
+
+        </section>
+
+
+        <!-- 逐時預報 -->
+        <section class="section">
+
+            <div class="section-title">
+                <h2>今日預報</h2>
+                <span>逐時</span>
+            </div>
+
+            <div class="hourly">
+
+                <div>
+                    <small>09:00</small>
+                    <span>☀️</span>
+                    <b>28°</b>
+                </div>
+
+                <div>
+                    <small>12:00</small>
+                    <span>☀️</span>
+                    <b>31°</b>
+                </div>
+
+                <div>
+                    <small>15:00</small>
+                    <span>🌤️</span>
+                    <b>33°</b>
+                </div>
+
+                <div>
+                    <small>18:00</small>
+                    <span>🌥️</span>
+                    <b>31°</b>
+                </div>
+
+                <div>
+                    <small>21:00</small>
+                    <span>🌙</span>
+                    <b>29°</b>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 小幫手 -->
+        <section class="helper-card">
+
+            <div class="helper-icon">🤖</div>
+
+            <div>
+                <h3>天氣小幫手</h3>
+                <p>
+                    今天降雨機率較低，適合外出活動。
+                    記得補充水分並注意高溫。
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- 預報 -->
+    <main id="forecast" class="page">
+
+        <h2>📅 天氣預報</h2>
+
+        <div class="forecast-list">
+
+            <div class="forecast-item">
+                <span>今天</span>
+                <span>☀️</span>
+                <b>27° / 33°</b>
+            </div>
+
+            <div class="forecast-item">
+                <span>明天</span>
+                <span>🌤️</span>
+                <b>27° / 32°</b>
+            </div>
+
+            <div class="forecast-item">
+                <span>週三</span>
+                <span>🌥️</span>
+                <b>26° / 31°</b>
+            </div>
+
+            <div class="forecast-item">
+                <span>週四</span>
+                <span>🌧️</span>
+                <b>25° / 29°</b>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- 小幫手 -->
+    <main id="helper" class="page">
+
+        <h2>🤖 天氣小幫手</h2>
+
+        <div class="helper-section">
+
+            <article>
+                <h3>☀️ 今天適合曬衣服嗎？</h3>
+                <p>
+                    根據目前天氣狀況，今天適合曬衣服。
+                    建議上午開始晾曬，並留意午後天氣變化。
+                </p>
+            </article>
+
+            <article>
+                <h3>🌡️ 什麼是體感溫度？</h3>
+                <p>
+                    體感溫度除了氣溫之外，也會受到濕度、
+                    風速等因素影響，因此可能與實際氣溫不同。
+                </p>
+            </article>
+
+            <article>
+                <h3>🌧️ 什麼是短暫雨？</h3>
+                <p>
+                    短暫雨通常代表降雨時間較短，
+                    但一天之中可能出現數次降雨。
+                </p>
+            </article>
+
+        </div>
+
+    </main>
+
+
+    <!-- 警報 -->
+    <main id="warning" class="page">
+
+        <h2>⚠️ 天氣警報</h2>
+
+        <div class="warning-card">
+
+            <div class="warning-icon">
+                ✓
+            </div>
+
+            <h3>目前沒有重大天氣警報</h3>
+
+            <p>
+                天氣狀況正常，仍建議留意最新氣象資訊。
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- 底部導航 -->
+    <nav class="bottom-nav">
+
+        <button class="nav-item active" data-page="home">
+            <span>🏠</span>
+            <small>首頁</small>
+        </button>
+
+        <button class="nav-item" data-page="forecast">
+            <span>📅</span>
+            <small>預報</small>
+        </button>
+
+        <button class="nav-item" data-page="helper">
+            <span>🤖</span>
+            <small>小幫手</small>
+        </button>
+
+        <button class="nav-item" data-page="warning">
+            <span>⚠️</span>
+            <small>警報</small>
+        </button>
+
+    </nav>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
