@@ -1,0 +1,422 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4f6f8;
+    color: #202124;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+}
+
+button {
+    font-family: inherit;
+}
+
+.app {
+    min-height: 100vh;
+    padding-bottom: 90px;
+}
+
+
+/* 頂端 */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding:
+        calc(env(safe-area-inset-top) + 20px)
+        20px
+        10px;
+}
+
+.small-title {
+    font-size: 14px;
+    color: #777;
+}
+
+.topbar h1 {
+    margin: 4px 0 0;
+    font-size: 25px;
+}
+
+.location-button {
+    border: 0;
+    background: white;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    font-size: 24px;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+
+
+/* 頁面 */
+
+.page {
+    display: none;
+    padding: 10px 20px;
+}
+
+.page.active {
+    display: block;
+}
+
+.page > h2 {
+    margin-top: 15px;
+}
+
+
+/* 天氣卡 */
+
+.weather-card {
+    margin-top: 15px;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background: white;
+
+    box-shadow: 0 6px 25px rgba(0,0,0,.07);
+}
+
+.weather-icon {
+    font-size: 65px;
+}
+
+.temperature {
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.weather-description {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.temperature-range {
+    margin-top: 10px;
+    color: #777;
+}
+
+
+/* 資訊 */
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 15px;
+}
+
+.info-card {
+    background: white;
+
+    padding: 17px;
+
+    border-radius: 18px;
+
+    display: grid;
+
+    grid-template-columns: auto 1fr;
+
+    column-gap: 8px;
+}
+
+.info-card span {
+    grid-row: span 2;
+    font-size: 25px;
+}
+
+.info-card strong {
+    font-size: 16px;
+}
+
+.info-card small {
+    color: #777;
+}
+
+
+/* 區塊 */
+
+.section {
+    margin-top: 25px;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-title h2 {
+    font-size: 20px;
+}
+
+.section-title span {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* 逐時 */
+
+.hourly {
+    display: flex;
+
+    overflow-x: auto;
+
+    gap: 12px;
+
+    padding: 5px 0 10px;
+}
+
+.hourly > div {
+    flex: 0 0 70px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 9px;
+
+    background: white;
+
+    padding: 14px 8px;
+
+    border-radius: 17px;
+}
+
+.hourly span {
+    font-size: 25px;
+}
+
+
+/* 小幫手 */
+
+.helper-card {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 15px;
+
+    padding: 18px;
+
+    background: white;
+
+    border-radius: 20px;
+}
+
+.helper-icon {
+    font-size: 35px;
+}
+
+.helper-card h3 {
+    margin: 0;
+}
+
+.helper-card p {
+    margin-bottom: 0;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/* 預報 */
+
+.forecast-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.forecast-item {
+    display: grid;
+
+    grid-template-columns: 1fr 50px 100px;
+
+    align-items: center;
+
+    padding: 18px;
+
+    background: white;
+
+    border-radius: 18px;
+}
+
+.forecast-item span:nth-child(2) {
+    font-size: 25px;
+}
+
+
+/* 小幫手內容 */
+
+.helper-section {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.helper-section article {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 20px;
+}
+
+.helper-section h3 {
+    margin-top: 0;
+}
+
+.helper-section p {
+    line-height: 1.7;
+    color: #666;
+}
+
+
+/* 警報 */
+
+.warning-card {
+    text-align: center;
+
+    background: white;
+
+    padding: 40px 20px;
+
+    border-radius: 25px;
+
+    margin-top: 20px;
+}
+
+.warning-icon {
+    margin: auto;
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e8f5e9;
+
+    font-size: 30px;
+}
+
+.warning-card p {
+    color: #777;
+}
+
+
+/* 底部導航 */
+
+.bottom-nav {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 75px;
+
+    padding-bottom: env(safe-area-inset-bottom);
+
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+
+    background: rgba(255,255,255,.92);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-top: 1px solid rgba(0,0,0,.06);
+
+    z-index: 100;
+}
+
+.nav-item {
+    border: 0;
+
+    background: none;
+
+    color: #777;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+
+    font-size: 22px;
+}
+
+.nav-item small {
+    font-size: 11px;
+}
+
+.nav-item.active {
+    color: #1677ff;
+}
+
+
+/* 深色模式 */
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background: #111;
+        color: #eee;
+    }
+
+    .weather-card,
+    .info-card,
+    .hourly > div,
+    .helper-card,
+    .forecast-item,
+    .helper-section article,
+    .warning-card,
+    .location-button {
+        background: #1c1c1e;
+    }
+
+    .bottom-nav {
+        background: rgba(28,28,30,.92);
+    }
+
+    .small-title,
+    .temperature-range,
+    .helper-card p,
+    .helper-section p,
+    .forecast-item span {
+        color: #aaa;
+    }
+}
